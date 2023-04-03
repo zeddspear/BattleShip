@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lobster', cursive;
+}
+
+/* CSS for start Page */
+.startPage, .getNplay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.startPage{
+    gap: 13em;
+}
+
+.gameHeading{
+    font-family: 'Lobster', cursive;
+    font-size: 10em;
+    
+}
+
+.getNplay{
+    height: 20%;
+    gap: 5px;
+    z-index: 1;
+    margin-bottom: 5em;
+}
+
+.nameLable{
+    font-weight: 700;
+    font-size: larger;
+}
+
+.imageDiv{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(../imgs/trey-musk-tVUlXmwLwy0-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(5px);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.startButton, .axis,.playAgainbtn{
+    margin-top: 20px;
+    padding: 0.5em 2em 0.5em 2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    background-color: black;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.275);
+    transition: ease-in-out 0.15s;
+}
+
+.startButton:hover, .axis:hover,.playAgainbtn:hover{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.461) ;
+    transform: scale(1.1);
+}
+
+.nameInput{
+    padding: 2px 2px 2px 2px;
+    border: none;
+    background: transparent;
+    border: 2px solid black;
+    font-size: medium;
+    font-weight: 600;
+}
+
+/* CSS for main Content*/
+
+.mainDiv, .preparation{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: 700;
+    font-size: larger;
+    width: 100%;
+    background-color: #86b5ca;
+
+}
+
+.makeYourMove, .preHead{
+    margin-top: 1em;
+    border-bottom: 5px solid black;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.mainContent{
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    justify-content: space-around;
+    gap: 100px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.playerBoard , .computerBoard, .preBox{
+    height: 600px;
+    width: 700px;
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(38, 102, 125);
+    border: 5px solid #1b2131;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.605);
+}
+
+.computerBoard  > .cell:hover{
+    background-color: #2c4049;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.computerBoard > .cell:hover::before{
+ content: 'x';
+}
+
+.column{
+    border: 1px solid #1b2131;
+    height: 59px;
+    width: 69px;
+    
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    font-family: 'Indie Flower', cursive;
+    border-top: solid #1b2131 3px;
+    width: 100%;
+    background-color: #394768;
+    font-weight: 800;
+    font-size: 0.9em;
+    
+    
+}
+
+
+a{
+    color: black;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.playAgain{
+    position: absolute;
+    top: 35%;
+    background-color: #394768;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.52);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 350px;
+    height: 150px;
+    z-index: 0;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 800;
+    font-size: larger;
+    opacity: 0;
+    visibility: hidden;
+    
+
+}
+
+.transparent{
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.275);
+    z-index: 0;
+    position: absolute;
+}
+
+
+
+/* Preparation page styling */
+
+
+.preparation{
+    justify-content: space-around !important;
+}
+
+.preBox{
+    margin-bottom: 3em;
+}
+
+.preBox > .cell:hover{
+    cursor: pointer;
+}
+
+.ship{
+    background-color: rgb(22, 22, 22);
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+.miss{
+    background-color: rgb(169, 170, 172);
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+.hit{
+    background-color: rgb(111, 27, 27);
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+    pointer-events: none;
+}
+
+
+
